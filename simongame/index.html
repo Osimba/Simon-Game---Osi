@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<title>Simon Game - Osei</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+
+<body>
+	
+	<div id="main" class="text-center">
+		<h1>Simon Game</h1>
+
+		<div id="board">
+
+			<div id="console">
+				<div class="row">
+					<div id="counter" class="col-sm-4">00</div>
+					<div id="start" class="col-sm-4">Start</div>
+					<div id="strict" class="col-sm-4">Strict</div>
+				</div>
+				<div id="power">On Off</div>
+
+			</div>
+			
+			<div id="btns">
+				<div id="B1">green</div>
+				<div id="B2">red</div>
+				<div id="B3">yellow</div>
+				<div id="B4">blue</div>
+			</div>
+		</div>
+		<audio id='B1sound' autoplay='false' height='0' hidden='true'>
+			<source src='https://s3.amazonaws.com/freecodecamp/simonSound1.mp3' type='audio/mp3'>
+		</audio>
+		<audio id='B2sound' autoplay='false' height='0' hidden='true'>
+			<source src='https://s3.amazonaws.com/freecodecamp/simonSound2.mp3' type='audio/mp3'>
+		</audio>
+		<audio id='B3sound' autoplay='false' height='0' hidden='true'>
+			<source src='https://s3.amazonaws.com/freecodecamp/simonSound3.mp3' type='audio/mp3'>
+		</audio>
+		<audio id='B4sound' autoplay='false' height='0' hidden='true'>
+			<source src='https://s3.amazonaws.com/freecodecamp/simonSound4.mp3' type='audio/mp3'>
+		</audio>
+
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="simongame.js"></script>
+</body>
+</html>
