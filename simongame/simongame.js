@@ -31,7 +31,7 @@ function main(){
 			 * play tone
 			 * set delay for each button press
 			 */
-			$('#B' + seq[i]).click();
+			setTimeout(btnClicked('B' + seq[i]), 1500);
 		}
 	}
 
@@ -42,24 +42,29 @@ function main(){
 
 
 	$("#B1").mousedown(function(){
-		bSound1.load();
-		bSound1.play();
-		$("#B1").prop("transform", "matrix(.95, 0, 0, .95, 2, 2)");
+		btnClicked(this.id)
 	});
-	$("#B1").mouseup(function(){
-	//	bSound1.pause();
-	//	this.removeProp("box-shadow");
-	//	this.removeProp("transform");
+
+	$("#B2").mousedown(function(){
+		btnClicked(this.id)
 	});
-	$("#B2").on('click', function(){
-		$('#B1').click();
-		bSound2.play();
+
+	$("#B3").mousedown(function(){
+		btnClicked(this.id)
 	});
-	$("#B3").on('click', function(){
-		bSound3.play();
+
+	$("#B4").mousedown(function(){
+		btnClicked(this.id)
 	});
-	$("#B4").on('click', function(){
-		bSound4.play();
+
+	function btnClicked(button) {
+		console.log(button);
+		document.getElementById(button + "sound").load();
+		document.getElementById(button + "sound").play();
+	}
+
+	$("button").click(function(){
+		runSequence([1, 2, 3, 4]);
 	});
 
 
