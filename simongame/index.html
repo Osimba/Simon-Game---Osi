@@ -14,7 +14,7 @@
 </head>
 
 <body>
-	
+
 	<div id="main" class="text-center">
 		<h1>Simon Game</h1>
 
@@ -22,16 +22,23 @@
 
 			<div id="console">
 				<div class="row">
-					<div id="counter" class="col-sm-4">00</div>
-					<div id="start" class="col-sm-4">Start</div>
-					<div id="strict" class="col-sm-4">Strict</div>
+					<div id="counter" class="col-xs-4 col-sm-4">00</div>
+					<div id="start" class="col-xs-4 col-sm-4"><div class="btn btn-primary">
+
+					</div>Start</div>
+					<div id="strict" class="col-xs-4 col-sm-4"><div class="btn btn-primary">
+
+					</div>Strict</div>
 				</div>
-				<div id="power">On Off</div>
+				<label class="switch">
+					<input type="checkbox" value="1" id="power">
+					<span class="slider round"></span>
+				</label>
 
 			</div>
-			
+
 			<div id="btns">
-				<div id="B1">
+				<div id="B1" value='1'>
 					<audio id='B1sound' autoplay='false' height='0' hidden='true'>
 						<source src='https://s3.amazonaws.com/freecodecamp/simonSound1.mp3' type='audio/mp3'>
 					</audio>
