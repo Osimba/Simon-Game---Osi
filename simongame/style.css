@@ -1,3 +1,7 @@
+body {
+	background-color: gray;
+}
+
 #board{
 	border: 2px solid black;
 	border-radius: 50%;
@@ -16,24 +20,20 @@
 	cursor: pointer;
 }
 
-#B1:active {
-	box-shadow: 0 5px #222;
+.B1 {
 	transform: matrix(.95, 0, 0, .95, 2, 2);
 
 }
 
-#B2:active {
-	box-shadow: 0 5px #222;
+.B2 {
 	transform: matrix(.95, 0, 0, .95, -2, 2);
 }
 
-#B3:active {
-	box-shadow: 0 5px #222;
+.B3 {
 	transform: matrix(.95, 0, 0, .95, 2, -2);
 }
 
-#B4:active {
-	box-shadow: 0 5px #222;
+.B4 {
 	transform: matrix(.95, 0, 0, .95, -2, -2);
 }
 
@@ -80,4 +80,80 @@
 #console > .row {
 	margin-top: 75px;
 	margin-bottom: 20px;
+}
+
+#start > div {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#strict > div {
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	background-color: white;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 17px;
+}
+
+.switch input {
+	display: none;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #991f00;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #991f00;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
